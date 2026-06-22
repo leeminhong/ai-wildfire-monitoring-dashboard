@@ -502,7 +502,7 @@ a{color:inherit}
     <div class="top-status" aria-label="운영 상태">
       <span class="pill"><span class="dot"></span>Prototype Dashboard</span>
       <span class="pill"><span class="dot"></span>모델 <strong>Logistic Regression</strong></span>
-      <span class="pill"><span class="dot warn"></span>검증 날짜 <strong id="activeDatePill">2025-03-22</strong></span>
+      <span class="pill"><span class="dot warn"></span>검증 날짜 <strong id="activeDatePill">2025-03-26</strong></span>
       <span class="pill"><span class="dot hot"></span>AUC <strong>0.736</strong></span>
       <span class="pill">단위 <strong>시군구 x 일</strong></span>
     </div>
@@ -568,12 +568,12 @@ a{color:inherit}
             <h2 class="panel-title">날짜별 재생</h2>
             <div class="panel-kicker">holdout 날짜를 바꿔 사후검증 라벨 기준 포착 결과를 비교</div>
           </div>
-          <span class="panel-kicker" id="activeDateLabel">대형 산불 다발일</span>
+          <span class="panel-kicker" id="activeDateLabel">다발·고포착 사례</span>
         </div>
         <div class="panel-body">
           <div class="tabs" aria-label="검증 날짜 선택">
-            <button class="tab active" type="button" data-date="2025-03-22">2025-03-22</button>
-            <button class="tab" type="button" data-date="2025-03-26">2025-03-26</button>
+            <button class="tab" type="button" data-date="2025-03-22">2025-03-22</button>
+            <button class="tab active" type="button" data-date="2025-03-26">2025-03-26</button>
             <button class="tab" type="button" data-date="2025-04-26">2025-04-26</button>
           </div>
           <div class="date-note" id="dateNote">대표 운영점: 상위 60% 관제큐 기준</div>
@@ -585,22 +585,22 @@ a{color:inherit}
       <div class="kpis">
         <article class="kpi">
           <div class="label">사후검증 산불</div>
-          <div class="value" id="actualFires">17</div>
+          <div class="value" id="actualFires">10</div>
           <div class="note">실제 여부는 사후검증 라벨</div>
         </article>
         <article class="kpi hot">
           <div class="label">관제큐 포착</div>
-          <div class="value" id="capturedFires">11</div>
+          <div class="value" id="capturedFires">9/10</div>
           <div class="note">상위 60% 안에 포함</div>
         </article>
         <article class="kpi">
           <div class="label">선택일 포착률</div>
-          <div class="value" id="captureRate">64.7%</div>
+          <div class="value" id="captureRate">90%</div>
           <div class="note">선택일 사후검증 라벨 기준</div>
         </article>
         <article class="kpi">
           <div class="label">고위험 위치</div>
-          <div class="value" id="criticalToday">16</div>
+          <div class="value" id="criticalToday">10</div>
           <div class="note">위험점수 85 이상</div>
         </article>
       </div>
@@ -646,7 +646,7 @@ a{color:inherit}
         <div class="panel">
           <div class="panel-head">
             <h2 class="panel-title">날짜별 검증 결과</h2>
-            <span class="panel-kicker" id="dayMetricDate">2025-03-22</span>
+            <span class="panel-kicker" id="dayMetricDate">2025-03-26</span>
           </div>
           <div class="panel-body">
             <div class="metric-board" id="dayMetricBoard"></div>
@@ -733,7 +733,7 @@ const detailPanel=document.getElementById('detailPanel');
 const detailRank=document.getElementById('detailRank');
 const regionBars=document.getElementById('regionBars');
 const mapLayerCount=document.getElementById('mapLayerCount');
-let currentDate='2025-03-22';
+let currentDate='2025-03-26';
 let currentMapLayer='all';
 let selectedId=snapshots[currentDate].alerts[0].id;
 
